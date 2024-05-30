@@ -1,0 +1,230 @@
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: rem(16px);
+  color: #333;
+  line-height: 1.5;
+}
+
+.html-css {
+  margin: rem(100px) rem(30px);
+
+  /* Для первого задания */
+
+  a {
+    margin: rem(2px);
+  }
+
+  p {
+    margin: rem(16px) 0;
+  }
+
+  ul {
+    margin: rem(20px) 0;
+    padding-left: rem(40px);
+  }
+
+  &__block {
+    &:not(:first-child) {
+      margin-top: rem(60px);
+    }
+  }
+
+  &__title {
+    margin: rem(26.8px) 0;
+
+    text-transform: uppercase;
+    font-size: rem(40px);
+    color: #f03333;
+    line-height: 1.2;
+  }
+
+  &__wrapper {
+    margin-top: rem(30px);
+  }
+
+  &__subtitle {
+    margin: rem(24.9px) 0;
+
+    font-size: rem(30px);
+    color: #12ac11;
+    line-height: 1.2;
+    text-decoration: underline;
+  }
+
+  &__list {
+    font-size: rem(20px);
+    color: #444;
+    font-style: italic;
+    list-style-type: square;
+  }
+
+  /* Для третьего задания */
+
+  &__table {
+    border-collapse: collapse;
+
+    td,
+    th {
+      padding: rem(5px) rem(10px);
+      border: rem(1px) solid #ccc;
+    }
+  }
+
+  thead {
+    background-color: #f0f1f4;
+  }
+
+  tfoot {
+    background-color: #121212;
+    color: #fff;
+    text-align: end;
+  }
+
+  /* Для 4 задания */
+
+  &-space {
+    width: rem(600px);
+    height: rem(400px);
+    background-image: url('../../images/bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+  }
+
+  &__planet-1 {
+    position: absolute;
+    left: rem(170px);
+    top: rem(20px);
+    z-index: 1;
+  }
+
+  &__planet-2 {
+    position: absolute;
+    left: rem(50px);
+    top: rem(70px);
+    z-index: 2;
+  }
+
+  &__spaceship {
+    position: absolute;
+    left: rem(150px);
+    top: rem(150px);
+    z-index: 3;
+  }
+
+  &__planet-3 {
+    position: absolute;
+    left: rem(150px);
+    top: rem(135px);
+    z-index: 4;
+  }
+
+  &__ufo {
+    position: absolute;
+    left: rem(130px);
+    top: rem(300px);
+    z-index: 5;
+  }
+
+  &__asteroid {
+    position: absolute;
+    left: rem(430px);
+    top: rem(80px);
+    z-index: 6;
+  }
+
+  &__superman {
+    position: absolute;
+    right: rem(30px);
+    bottom: rem(0px);
+    z-index: 7;
+  }
+
+  /* Для 5 задания */
+
+  &__modal {
+    padding: rem(15px);
+    position: fixed;
+    top: rem(75px);
+    left: 50%;
+    margin-left: -1 * rem(160px);
+
+    width: rem(320px);
+    background-color: #fff;
+  }
+  /* Для 5 дополнительного задания */
+
+  &__content {
+    margin-top: rem(75px);
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+
+    &_flex {
+      padding: rem(15px);
+
+      position: relative;
+
+      width: rem(320px);
+      background-color: #fff;
+    }
+  }
+
+  &__modal-close {
+    padding: 0;
+    position: absolute;
+
+    top: -1 * rem(20px);
+    right: -1 * rem(20px);
+
+    border: none;
+    background: none;
+
+    width: rem(20px);
+    height: rem(20px);
+
+    cursor: pointer;
+  }
+
+  .btn {
+    padding: rem(7px) rem(15px);
+    display: inline-block;
+
+    font-family: inherit;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .success {
+    background-color: #35bb27;
+  }
+
+  .cancel {
+    background-color: #f9861f;
+  }
+
+  &__mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+
+    background-color: #121212;
+    opacity: 0.8;
+  }
+
+  h4 {
+    margin: rem(22px) 0;
+  }
+}

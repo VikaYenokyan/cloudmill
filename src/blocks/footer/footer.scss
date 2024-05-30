@@ -1,0 +1,200 @@
+:root {
+  --font-family: 'Druk Text Cyr', sans-serif;
+  --second-family: 'Inter', sans-serif;
+}
+
+:root {
+  --1: #1b1b1b;
+  --4: #6f7173;
+  --5: #d8d9da;
+  --3: #fff;
+  --2: #db2e27;
+  --linii: #d8d9da;
+}
+
+@mixin svg {
+  width: rem(60px);
+  height: rem(60px);
+}
+
+@mixin title {
+  font-family: 'Druk Text Cyr';
+  font-weight: 700;
+  font-size: rem(24px);
+  letter-spacing: 0.02rem;
+  text-transform: uppercase;
+  color: var(--1);
+}
+
+@mixin subtitle {
+  font-family: var(--second-family);
+  font-weight: 200;
+  font-size: rem(14px);
+  line-height: rem(21px);
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+html {
+  /* background-color: #b8b8b8; */
+}
+
+.footer {
+  margin-left: rem(30px);
+  margin-right: rem(30px);
+  flex: 0 1;
+
+  background-color: var(--3);
+
+  &-main {
+    padding: rem(32px) rem(32px) rem(140px) rem(32px);
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: rem(20px);
+
+    border-top: 1px solid var(--5);
+
+    &__col {
+      .mt-b {
+        margin-top: rem(64px);
+      }
+
+      .mt-s {
+        margin-top: rem(16px);
+      }
+
+      &:last-child {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &-title {
+    @include title;
+
+    &__link {
+      color: var(--1);
+
+      &:hover {
+        color: var(--2);
+      }
+    }
+  }
+
+  &-nav {
+    margin-top: rem(24px);
+
+    display: flex;
+    flex-direction: column;
+    gap: rem(12px);
+
+    &__link {
+      font-family: var(--second-family);
+      font-weight: 300;
+      font-size: rem(18px);
+      line-height: rem(27px);
+      letter-spacing: -0.01em;
+      color: var(--4);
+
+      &:hover {
+        color: var(--2);
+      }
+    }
+  }
+
+  &-contacts {
+    padding: rem(32px);
+
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+
+    border-top: 1px solid var(--5);
+    border-bottom: 1px solid var(--5);
+
+    &__link {
+      @include title;
+      &:hover {
+        color: var(--2);
+      }
+
+      svg {
+        @include svg;
+
+        &:hover rect {
+          fill: var(--2);
+        }
+
+        &:hover path {
+          fill: var(--3);
+        }
+      }
+    }
+
+    &__subtitle {
+      @include subtitle;
+      margin-bottom: rem(8px);
+
+      color: var(--4);
+    }
+  }
+
+  &-politics {
+    padding: rem(32px);
+
+    display: grid;
+    grid-template-columns: 3fr 2fr 1fr;
+
+    &__subtitle {
+      @include subtitle;
+      color: var(--4);
+
+      &_black {
+        @include subtitle;
+        color: var(--1);
+      }
+    }
+    &__logo svg {
+      display: inline-block;
+      width: rem(91px);
+    }
+    &__link {
+      color: var(--1);
+
+      &:hover {
+        color: var(--2);
+      }
+    }
+  }
+}
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+
+  &-link {
+    &:hover {
+      color: var(--2);
+    }
+
+    &__item {
+      width: rem(60px);
+      height: rem(60px);
+
+      &:hover {
+        rect {
+          fill: #db2e27;
+        }
+
+        path {
+          fill: #fff;
+        }
+      }
+
+      rect {
+        transition: fill 0.2s;
+      }
+    }
+  }
+}

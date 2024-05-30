@@ -1,0 +1,172 @@
+mixin html-css(mods)
+  .html-css
+    .html-css__block
+      .html-css__title 
+        |Задание 1
+      .html-css__wrapper 
+        h1.html-css__title 
+          |Оформление текста
+        p
+          |Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, qui beatae provident eius dolorum magnam dolorem quas sed, veritatis fugiat molestiae dignissimos reprehenderit, amet deserunt porro voluptates sunt natus totam facere ad vero quaerat? Rem ea pariatur exercitationem, doloremque enim reprehenderit dicta ipsum voluptatum quam molestias deserunt unde aliquid nisi natus tempora eligendi voluptatem esse facilis possimus. Ipsa blanditiis ut asperiores natus! Magni repellendus dignissimos aliquid culpa ipsum fuga ullam similique neque vero, cum enim vel error quia unde totam accusantium. A quos vel dolore dicta nulla expedita, quia qui eaque ratione fuga velit, consequatur fugiat debitis assumenda enim corrupti earum sequi, mollitia molestias commodi! Eligendi excepturi quae, esse quaerat ipsam numquam voluptates repudiandae laborum placeat distinctio expedita quod vel accusamus veritatis harum?
+        h2.html-css__subtitle 
+          |Заголовок второго уровня
+        p
+          |Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, qui beatae provident eius dolorum magnam dolorem quas sed, veritatis fugiat molestiae dignissimos reprehenderit, amet deserunt porro voluptates sunt natus totam facere ad vero quaerat? Rem ea pariatur exercitationem, doloremque enim reprehenderit dicta ipsum voluptatum quam molestias deserunt unde aliquid nisi natus tempora eligendi voluptatem esse facilis possimus. Ipsa blanditiis ut asperiores natus! Magni repellendus dignissimos aliquid culpa ipsum fuga ullam similique neque vero, cum enim vel error quia unde totam accusantium. A quos vel dolore dicta nulla expedita, quia qui eaque ratione fuga velit, consequatur fugiat debitis assumenda enim corrupti earum sequi, mollitia molestias commodi! Eligendi excepturi quae, esse quaerat ipsam numquam voluptates repudiandae laborum placeat distinctio expedita quod vel accusamus veritatis harum?
+        ul.html-css__list
+          li 
+            |пункт 1
+          li 
+            |пункт 2
+          li
+            |пункт 3
+    .html-css__block
+      .html-css__title 
+        |Задание 2
+      .html-css__wrapper
+        p 
+          a(href="#")
+            |Главная
+          a(href="contacts")
+            |Контакты
+          a(href="https://www.google.ru/" target="_blank")
+            |Наш партнер
+        h1 
+          |Главная  
+        p
+          |Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, qui beatae provident eius dolorum magnam dolorem quas sed, veritatis fugiat molestiae dignissimos reprehenderit, amet deserunt porro voluptates sunt natus totam facere ad vero quaerat? Rem ea pariatur exercitationem, doloremque enim reprehenderit dicta ipsum voluptatum quam molestias deserunt unde aliquid nisi natus tempora eligendi voluptatem esse facilis possimus. Ipsa blanditiis ut asperiores natus! Magni repellendus dignissimos aliquid culpa ipsum fuga ullam similique neque vero, cum enim vel error quia unde totam accusantium. A quos vel dolore dicta nulla expedita, quia qui eaque ratione fuga velit, consequatur fugiat debitis assumenda enim corrupti earum sequi, mollitia molestias commodi! Eligendi excepturi quae, esse quaerat ipsam numquam voluptates repudiandae laborum placeat distinctio expedita quod vel accusamus veritatis harum?
+        p 
+          a(href="present.pdf" download)
+            |Наша презентация
+    .html-css__block
+      .html-css__title 
+        |Задание 3
+      .html-css__wrapper
+        table.html-css__table(width="500")
+          thead 
+            tr 
+              th
+                |№
+              th
+                |Имя
+              th
+                |E-mail
+              th
+                |Пол
+              th
+                |Дата
+          tbody
+            tr 
+              td
+                |1
+              td
+                |Егор
+              td
+                |egor@mail.ru
+              td
+                |М
+              td
+                |02.12.1993
+            tr 
+              td
+                |2
+              td
+                |Анна
+              td
+                |anna@mail.ru
+              td
+                |Ж
+              td
+                |12.07.1996
+            tr 
+              td
+                |3
+              td
+                |Виктор
+              td
+                |victor@mail.ru
+              td
+                |М
+              td
+                |25.03.1989
+          tfoot
+            tr 
+              td(colspan="5")
+                |Всего: 3
+    .html-css__block
+      .html-css__title 
+        |Задание 4
+      .html-css__wrapper
+        .html-css-space
+          .html-css__planet-1 
+            img(src="../../images/planet-1.png", alt="")
+          .html-css__planet-2 
+            img(src="../../images/planet-2.png", alt="")
+          .html-css__spaceship 
+            img(src="../../images/spaceship.png", alt="")
+          .html-css__planet-3
+            img(src="../../images/planet-3.png", alt="")
+          .html-css__ufo
+            img(src="../../images/ufo.png", alt="")
+          .html-css__asteroid
+            img(src="../../images/asteroid.png", alt="")
+          .html-css__superman
+            img(src="../../images/superman.png", alt="")
+    .html-css__block
+      .html-css__title 
+        |Задание 5
+      .html-css__wrapper
+        a(href="modal" target="_blank")
+          |Задание находится по ссылке
+    .html-css__block
+      .html-css__title 
+        |Задание 5 дополнительное
+      .html-css__wrapper
+        a(href="modal-flex" target="_blank")
+          |Задание находится по ссылке
+    .html-css__block
+      .html-css__title 
+        |Задание 6
+      .html-css__wrapper
+        .intro 
+          .html-css__container 
+            .intro-slider
+              .slider-item
+                p.slider-subtitle
+                  span 
+                    |New 
+                  |ARRIVALS
+                h2.slider-title
+                  |Sky Planter
+                  sup 
+                    |$18.00
+                a(href="#").slider-btn
+                  |Shop Now
+        .benefits 
+          .benefits-item
+            img(src="img/some-img.jpg", alt="").img
+            h4.benefits-title
+              |fast delivery
+            .benefits-text
+              p.
+                |Same day delivery as soon as possible
+          .benefits-item
+            img(src="img/some-img.jpg", alt="").img
+            h4.benefits-title
+              |SPECIAL DISCOUNT
+            .benefits-text
+              p.
+                |Get attractive offers day by day
+          .benefits-item
+            img(src="img/some-img.jpg", alt="").img
+            h4.benefits-title
+              |SECURE CHECKOUT
+            .benefits-text
+              p.
+                |Fully secured SSL checkout technology
+          .benefits-item
+            img(src="img/some-img.jpg", alt="").img
+            h4.benefits-title
+              |MONEY RETURNS
+            .benefits-text
+              p.
+                |100% Money back guarntee
