@@ -227,4 +227,283 @@ body {
   h4 {
     margin: rem(22px) 0;
   }
+
+  /* Для 7-го задания */
+
+  .product {
+    margin: 0px auto 0px auto;
+    max-width: 350px;
+
+    background-color: #ffffff;
+    box-shadow: 0 0 76px rgba(231, 231, 231, 0.66);
+  }
+
+  .product-header {
+    display: flex;
+  }
+
+  .product-header-left {
+    margin: 2rem 0 0 0;
+    padding: 0px 0 0 0px;
+
+    width: 25%;
+
+    list-style: none;
+    text-align: center;
+    background-color: #ffffff;
+  }
+
+  .product-header-left li {
+    margin-bottom: 2.5rem;
+  }
+  .product-header-btn {
+    padding: 0px;
+    border: 0;
+
+    background: none;
+    cursor: pointer;
+  }
+
+  .product-header-right {
+    position: relative;
+
+    width: 75%;
+  }
+
+  .product-label {
+    position: absolute;
+
+    bottom: 1rem;
+    left: -25px;
+
+    height: 50px;
+    width: 50px;
+
+    border-radius: 50%;
+
+    background-color: #333;
+
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 50px;
+    font-weight: 500;
+  }
+
+  /* Для 9 задания */
+
+  #form {
+    padding: rem(10px);
+    display: inline-block;
+
+    background-color: #f8f8f8;
+  }
+
+  &-form {
+    padding: rem(10px);
+
+    display: flex;
+    flex-direction: column;
+
+    width: rem(320px);
+
+    background-color: #fff;
+
+    &__input {
+      padding: rem(10px);
+      margin: rem(5px);
+
+      border: 1px solid #ccc;
+    }
+
+    &__button {
+      padding: rem(10px);
+      margin: rem(5px);
+
+      border: none;
+
+      background-color: #1cbc11;
+      color: #fff;
+
+      &:hover {
+        background-color: #14a20a;
+      }
+    }
+  }
+
+  /* Для 10 задания */
+
+  &-nav {
+    display: inline-block;
+
+    &__ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: rem(6px);
+    }
+
+    &__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: rem(40px);
+      height: rem(40px);
+
+      background-color: #ddd;
+      color: #333;
+
+      &:hover {
+        background-color: #ccc;
+        cursor: pointer;
+        color: #333;
+      }
+
+      &_active {
+        background-color: #d10953;
+        color: #fff;
+      }
+    }
+  }
+
+  /* Для 11 задания */
+
+  &-breadcrumbs {
+    display: flex;
+    gap: rem(5px);
+    vertical-align: middle;
+
+    &__item {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0;
+      padding: 0;
+
+      &:not(:last-child)::after {
+        content: '>';
+      }
+
+      a {
+        margin: 0;
+      }
+    }
+
+    &__link {
+      padding-right: rem(5px);
+      color: #0b56ea;
+
+      &:not(span):hover {
+        text-decoration: underline;
+      }
+
+      &_current {
+        color: #333;
+      }
+    }
+  }
+
+  /* Для 12 задания */
+
+  &-check-form {
+    flex-direction: row;
+    width: auto;
+
+    &__label {
+      cursor: pointer;
+    }
+
+    &__real-checkbox {
+      width: 0;
+      height: 0;
+      opacity: 0;
+      position: absolute;
+      z-index: -1;
+    }
+
+    &__custom-checkbox {
+      margin-right: rem(5px);
+      display: inline-block;
+      position: relative;
+      width: rem(20px);
+      height: rem(20px);
+
+      background: #fff;
+      border: 2px solid #7e9bdd;
+      border-radius: 3px;
+      vertical-align: sub;
+
+      &::before {
+        content: '';
+        position: absolute;
+        background-image: url('../../images/square-check-solid.svg');
+        top: -2px;
+        left: -1px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: rem(20px);
+        height: rem(20px);
+
+        transform: scale(0);
+      }
+    }
+
+    &__real-checkbox:checked + &__custom-checkbox::before {
+      transform: scale(1);
+    }
+  }
+
+  /* Для 13 задания */
+
+  &-radio-form {
+    flex-direction: column;
+    width: auto;
+
+    &__label {
+      cursor: pointer;
+    }
+
+    &__real-radio {
+      width: 0;
+      height: 0;
+      opacity: 0;
+      position: absolute;
+      z-index: -1;
+    }
+
+    &__custom-radio {
+      margin-right: rem(5px);
+      display: inline-block;
+      position: relative;
+      width: rem(20px);
+      height: rem(20px);
+
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 50%;
+      vertical-align: sub;
+
+      &::before {
+        content: '';
+        position: absolute;
+        background-color: #49d120;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: rem(12px);
+        height: rem(12px);
+
+        transform: scale(0);
+      }
+    }
+
+    &__real-radio:checked + &__custom-radio::before {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
 }

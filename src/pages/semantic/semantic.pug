@@ -1,0 +1,74 @@
+extends ../../layout/layout
+
+block variables
+  -
+    const pageName = 'semantic'
+    const pageTitle = 'semantic'
+
+block content
+  main
+    .inner
+      header.header
+        nav.nav
+          a.nav-item(href='#')
+            |Главная
+          a.nav-item(href='#')
+            |О нас
+          a.nav-item(href='#')
+            |Услуги
+          a.nav-item(href='#')
+            |Контакты
+      // Content
+      .content
+        main.main
+          section.section
+            h1
+              |Кто мы такие?
+            p
+              |Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis soluta praesentium nobis vel, porro saepe repudiandae earum? Doloribus cumque expedita, alias. Sit impedit quam mollitia totam, porro voluptatibus tempora consequatur?
+          section.section
+            h2
+              |Наши услуги
+            p
+              |Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis soluta praesentium nobis vel, porro saepe repudiandae earum? Doloribus cumque expedita, alias. Sit impedit quam mollitia totam, porro voluptatibus tempora consequatur?
+          section.section
+            h2
+              |Полезные статьи
+            article.article
+              h4
+                |Название статьи
+              .date
+                |Опубликовано: 31.11.2020
+              .article-text
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi in ea rerum, sequi reprehenderit fugiat, dignissimos officiis, consectetur dolore sunt totam ullam. At voluptates ex nobis. Quod sint, vitae possimus.
+            article.article
+              h4
+                |Название статьи
+              .date
+                |Опубликовано: 31.11.2020
+              .article-text
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi in ea rerum, sequi reprehenderit fugiat, dignissimos officiis, consectetur dolore sunt totam ullam. At voluptates ex nobis. Quod sint, vitae possimus.
+        // /.main
+        aside.sidebar
+          h4
+            |Наши партнеры
+          p
+            img(src='img/some-img.jpg' alt='')
+          p
+            img(src='img/some-img.jpg' alt='')
+          p
+            img(src='img/some-img.jpg' alt='')
+      // /.content
+      // Footer
+      footer.footer
+        h3
+          |Наши контакты
+        address
+          p
+            |Адрес: Улица 23, дом 3, город
+          p
+            |Телефон: 22336644544
+          p
+            |Е-майл: hello@website.ru
