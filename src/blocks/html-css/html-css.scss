@@ -506,4 +506,114 @@ body {
       transform: translate(-50%, -50%) scale(1);
     }
   }
+
+  /* Для 14-го задания */
+
+  &-select-form {
+    &__wrapper {
+      position: relative;
+      width: rem(500px);
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 55%;
+        right: rem(10px);
+        transform: translateY(-45%);
+
+        display: block;
+        width: rem(10px);
+        height: (10px);
+
+        /* снимаем клик со стрелки */
+        pointer-events: none;
+
+        border-style: solid;
+        border-width: 6px 5px 0 5px;
+        border-color: #000 transparent transparent transparent;
+      }
+    }
+
+    &__select {
+      padding: rem(10px) rem(30px) rem(10px) rem(10px);
+      width: rem(500px);
+
+      border: 1px solid #7e9bbd;
+      background-color: #fff;
+      outline: none;
+      border-radius: 4px;
+
+      /* Избавимся от стандартного оформления */
+      appearance: none; //убрали стрелку
+      -moz-appearance: none;
+      -webkit-appearance: none;
+
+      cursor: pointer;
+
+      /* Для IE 10 и 11 версии */
+      &::-ms-expand {
+        display: none;
+      }
+    }
+  }
+
+  /* Для 15-го задания */
+  &__btn {
+    font-size: 16px;
+    padding: 0.5em 1.5em;
+
+    border-radius: 0.5em;
+    border: none;
+
+    background-color: #ccc;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      background-color: #c7d1d8;
+      cursor: pointer;
+    }
+
+    &:active {
+      background-color: #90969a;
+    }
+
+    &_sm {
+      font-size: 12px;
+    }
+
+    &_xl {
+      font-size: 20px;
+    }
+  }
+
+  /* Для 16-го задания */
+
+  &-menu {
+    display: flex;
+
+    &__link {
+      background-color: #444;
+      color: #fff;
+      padding: rem(10px);
+      margin: 0 !important;
+      width: 100%;
+
+      &:hover {
+        background-color: #333;
+      }
+    }
+  }
+
+  #sub-list {
+    margin: 0 !important;
+    padding-left: 0 !important;
+    display: none;
+  }
+
+  #sub-menu:hover > #sub-list {
+    display: flex;
+    flex-direction: column;
+
+    background-color: #333;
+  }
 }

@@ -245,3 +245,49 @@ mixin html-css(mods)
             input.html-css-radio-form__real-radio(id="female" type="radio" name="sex")
             span.html-css-radio-form__custom-radio
             |Жен
+    .html-css__block
+      .html-css__title 
+        |Задание 14
+      .html-css__wrapper
+        form.html-css-form.html-css-select-form(action="")
+          .html-css-select-form__wrapper
+            select.html-css-select-form__select(name="variables" id="html-css-select-form__select")
+              option(value="var-1")
+                |Вариант 1
+              option(value="var-2")
+                |Вариант 2
+              option(value="var-3")
+                |Вариант 3
+              option(value="var-4")
+                |Вариант 4
+    .html-css__block
+      .html-css__title 
+        |Задание 15
+      .html-css__wrapper
+        button.html-css__btn.html-css__btn_sm
+          |Кнопка
+        button.html-css__btn
+          |Кнопка
+        button.html-css__btn.html-css__btn_xl
+          |Кнопка
+    .html-css__block
+      .html-css__title 
+        |Задание 16
+      .html-css__wrapper
+        ul.html-css-menu 
+          li.html-css-menu__item
+            a.html-css-menu__link(href="#")
+              |Обычная ссылка
+          li.html-css-menu__item#sub-menu
+            a.html-css-menu__link#sub-link(href="#")
+              |Выпадающий список
+            ul.html-css-menu#sub-list
+              li.html-css-menu__item
+                a.html-css-menu__link#sub-link(href="#")
+                  |Ссылка
+              li.html-css-menu__item
+                a.html-css-menu__link#sub-link(href="#")
+                  |Ссылка
+          li.html-css-menu__item
+            a.html-css-menu__link(href="#")
+              |Обычная ссылка
