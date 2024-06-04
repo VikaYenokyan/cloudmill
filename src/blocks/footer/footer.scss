@@ -50,17 +50,17 @@ html {
     padding: rem(32px) rem(32px) rem(140px) rem(32px);
 
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 2fr);
     grid-column-gap: rem(20px);
 
     border-top: 1px solid var(--5);
 
     &__col {
-      .mt-b {
+      .mt-64 {
         margin-top: rem(64px);
       }
 
-      .mt-s {
+      .mt-16 {
         margin-top: rem(16px);
       }
 
@@ -108,7 +108,7 @@ html {
     padding: rem(32px);
 
     display: grid;
-    grid-template-columns: 3fr 1fr 1fr 1fr;
+    grid-template-columns: 6fr 2fr 2fr 2fr;
 
     border-top: 1px solid var(--5);
     border-bottom: 1px solid var(--5);
@@ -134,9 +134,12 @@ html {
 
     &__subtitle {
       @include subtitle;
-      margin-bottom: rem(8px);
 
       color: var(--4);
+    }
+
+    &__phones {
+      margin-top: rem(8px);
     }
   }
 
@@ -144,7 +147,7 @@ html {
     padding: rem(32px);
 
     display: grid;
-    grid-template-columns: 3fr 2fr 1fr;
+    grid-template-columns: 6fr 4fr 2fr;
 
     &__subtitle {
       @include subtitle;
@@ -174,13 +177,21 @@ html {
   gap: 2px;
 
   &-link {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    outline: 0;
+
+    width: rem(60px);
+    height: rem(60px);
+
     &:hover {
       color: var(--2);
     }
 
     &__item {
-      width: rem(60px);
-      height: rem(60px);
+      width: 100%;
+      height: 100%;
 
       &:hover {
         rect {
