@@ -14,10 +14,20 @@
   gap: rem(20px);
   border: 1px solid var(--unnamed, #d8d9da);
 
+  &:hover {
+    border: 1px solid var(--2, #db2e27);
+  }
+
   &_padding {
     padding: rem(20px) 0 rem(64px) 0;
     border-left: none;
     border-right: none;
+
+    &:hover {
+      border: 1px solid var(--2, #db2e27);
+      border-left: none;
+      border-right: none;
+    }
 
     #{$comp}__text {
       padding: 0;
@@ -124,9 +134,8 @@
   width: rem(292px);
   height: rem(60px);
   padding: rem(17px) rem(20px);
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
-  gap: 122px;
   flex-shrink: 0;
   background: var(--2, #db2e27);
 
@@ -145,6 +154,10 @@
     width: rem(24px);
     height: rem(24px);
   }
+
+  &:hover {
+    background: #b60f09;
+  }
 }
 
 .links {
@@ -161,5 +174,9 @@
     line-height: 150%; /* 30px */
     letter-spacing: -1 * rem(0.2px);
     text-decoration-line: underline;
+
+    &:hover {
+      color: var(--2, #db2e27);
+    }
   }
 }

@@ -83,7 +83,7 @@ html {
     }
   }
 
-  &-nav {
+  &-ul {
     margin-top: rem(24px);
 
     display: flex;
@@ -177,34 +177,27 @@ html {
   gap: 2px;
 
   &-link {
-    background-color: transparent;
+    background-color: var(--5, #d8d9da);
     border: none;
     padding: 0;
     outline: 0;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     width: rem(60px);
     height: rem(60px);
 
+    transition: fill 0.2s;
+    cursor: pointer;
+
     &:hover {
       color: var(--2);
-    }
+      background-color: #db2e27;
 
-    &__item {
-      width: 100%;
-      height: 100%;
-
-      &:hover {
-        rect {
-          fill: #db2e27;
-        }
-
-        path {
-          fill: #fff;
-        }
-      }
-
-      rect {
-        transition: fill 0.2s;
+      path {
+        fill: #fff;
       }
     }
   }
