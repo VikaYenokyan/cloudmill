@@ -1,0 +1,143 @@
+.ticket-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 3fr);
+  gap: rem(20px);
+  padding: rem(32px);
+
+  @media #{media("<")} {
+    padding: rem(24px);
+
+    overflow-x: scroll;
+    gap: rem(8px);
+    @include scrollbar-hidden;
+  }
+
+  @media #{media("<", m)} {
+    padding: rem(16px);
+  }
+}
+
+.ticket {
+  $comp: &;
+
+  border: 1px solid var(--unnamed, #d8d9da);
+
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+
+  @media #{media("<")} {
+    width: rem(255px);
+    height: rem(320px);
+  }
+
+  &:hover {
+    #{$comp}__descr {
+      transform: none;
+    }
+  }
+
+  &__screen {
+    padding: rem(32px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: rem(540px);
+
+    @media #{media("<")} {
+      padding: rem(16px);
+
+      height: 100%;
+      width: rem(255px);
+    }
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__title {
+    color: var(--1, #1b1b1b);
+    font-family: 'Druk Text Cyr';
+    font-size: rem(32px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    letter-spacing: -1 * rem(0.64px);
+    text-transform: uppercase;
+
+    @media #{media("<")} {
+      font-size: rem(20px);
+      letter-spacing: rem(-0.4px);
+    }
+  }
+
+  &__num {
+    color: var(--2, #db2e27);
+    font-family: 'Druk Text Cyr';
+    font-size: rem(32px);
+    letter-spacing: rem(-0.64px);
+
+    @media #{media("<")} {
+      font-size: rem(20px);
+      letter-spacing: rem(-0.4px);
+    }
+  }
+
+  &__img svg {
+    width: rem(168px);
+    height: rem(168px);
+
+    @media #{media("<")} {
+      width: rem(95px);
+      height: rem(95px);
+    }
+  }
+
+  &__descr {
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+
+    transform: translateY(100%);
+
+    color: var(--1, #1b1b1b);
+    font-family: Inter;
+    font-size: rem(24px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 36px */
+    letter-spacing: rem(-0.24px);
+    padding: rem(32px);
+    transition: transform 0.5s;
+    background-color: var(--5, #d8d9da);
+
+    p {
+      width: rem(385px);
+    }
+
+    @media #{media("<")} {
+      display: none;
+    }
+  }
+
+  &__mob-descr {
+    margin-top: rem(16px);
+    color: var(--4, #6f7173);
+    font-size: rem(14px);
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: rem(-0.14px);
+
+    display: none;
+    @media #{media("<")} {
+      display: block;
+    }
+  }
+}

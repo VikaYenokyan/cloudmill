@@ -1,0 +1,178 @@
+extends ../../layout/layout
+
+block variables
+  -
+    const pageName = 'projects'
+    const pageTitle = 'projects'
+
+
+
+block content
+  main
+    -
+      var cardsData = [
+        {
+          title: "Инжиниринговый центр",
+          num: "01",
+          img: `<svg xmlns="http://www.w3.org/2000/svg" width="168" height="168" viewBox="0 0 168 168" fill="none">
+            <path d="M78.071 130.637C107.102 130.637 130.637 107.103 130.637 78.0711C130.637 49.0396 107.102 25.505 78.071 25.505C49.0395 25.505 25.5049 49.0396 25.5049 78.0711C25.5049 107.103 49.0395 130.637 78.071 130.637Z" stroke="#D8D9DA" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="78" cy="78" r="29" stroke="#DB2E27" stroke-width="4" stroke-dasharray="25 25"/>
+            <circle cx="78" cy="78" r="10" stroke="#1B1B1B" stroke-width="4"/>
+            <path d="M141.631 141.631L115.245 115.245" stroke="#D8D9DA" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>
+            </svg>`,
+            descr: "Проводим максимально полный цикл исследований для разработки наиболее эффективной технологии сложных видов сырья."
+        },
+        {
+          title: "Опытная команда",
+          num: "02",
+          img: `<svg xmlns="http://www.w3.org/2000/svg" width="168" height="168" viewBox="0 0 168 168" fill="none">
+            <path d="M74.3203 127.428H67.5781V93.8364H99.4209V127.428H92.2416H90.2416V129.428V151.469H76.3203V129.428V127.428H74.3203Z" stroke="#D8D9DA" stroke-width="4"/>
+            <circle cx="83.4997" cy="74.7893" r="8.05346" stroke="#DB2E27" stroke-width="4"/>
+            <path d="M125.899 127.428H119.157V93.8364H151V127.428H143.821H141.821V129.428V151.469H127.899V129.428V127.428H125.899Z" stroke="#D8D9DA" stroke-width="4"/>
+            <circle cx="135.079" cy="74.7893" r="8.05346" stroke="#DB2E27" stroke-width="4"/>
+            <path d="M22.7421 127.428H16V93.8364H47.8428V127.428H40.6635H38.6635V129.428V151.469H24.7421V129.428V127.428H22.7421Z" stroke="#D8D9DA" stroke-width="4"/>
+            <circle cx="31.9216" cy="74.7893" r="8.05346" stroke="#DB2E27" stroke-width="4"/>
+            <circle cx="57.2732" cy="48.563" r="8.05346" stroke="#1B1B1B" stroke-width="4"/>
+            <circle cx="110.6" cy="48.563" r="8.05346" stroke="#1B1B1B" stroke-width="4"/>
+            <circle cx="83.4997" cy="24.085" r="8.05346" stroke="#DB2E27" stroke-width="4"/>
+            </svg>`,
+            descr: "Быстрая и качественная реализация проектов любой сложности инженерами-проектировщиками и технологами."
+        },
+        {
+          title: "Собственный машиностроительный завод",
+          num: "03",
+          img: `<svg xmlns="http://www.w3.org/2000/svg" width="168" height="168" viewBox="0 0 168 168" fill="none">
+            <path d="M135 46V29H110V46" stroke="#DB2E27" stroke-width="4"/>
+            <path d="M31.5996 44.0667H42.0663H150V151.133H31.5996V44.0667Z" stroke="#D8D9DA" stroke-width="4"/>
+            <path d="M41.5 44.3334V27.3334L85.7 14.8667V44.3334" stroke="#D8D9DA" stroke-width="4"/>
+            <rect x="18" y="99.6" width="52.6667" height="51.5333" fill="white" stroke="#DB2E27" stroke-width="4"/>
+            <path d="M107.533 126.8H121.4H135.267V151.133H121.4H107.533V126.8Z" stroke="#D8D9DA" stroke-width="4"/>
+            <rect x="47.4668" y="59.9333" width="23.2" height="22.0667" stroke="#1B1B1B" stroke-width="4"/>
+            <rect x="79.2002" y="59.9333" width="23.2" height="22.0667" stroke="#1B1B1B" stroke-width="4"/>
+            <rect x="110.934" y="59.9333" width="23.2" height="22.0667" stroke="#1B1B1B" stroke-width="4"/>
+            </svg>`,
+            descr: "Гарантируем высокое качество и бесперебойную работу поставляемого оборудования."
+        },
+        {
+          title: "Комплексный подход",
+          num: "04",
+          img: `<svg xmlns="http://www.w3.org/2000/svg" width="168" height="168" viewBox="0 0 168 168" fill="none">
+            <rect x="33.75" y="117.667" width="24.5" height="40.3333" stroke="#D8D9DA" stroke-width="4"/>
+            <rect x="71.75" y="117.667" width="24.5" height="40.3333" stroke="#D8D9DA" stroke-width="4"/>
+            <rect x="52.75" y="63.8334" width="24.5" height="40.3333" stroke="#1B1B1B" stroke-width="4"/>
+            <rect x="90.75" y="63.8334" width="24.5" height="40.3333" stroke="#1B1B1B" stroke-width="4"/>
+            <rect x="71.75" y="10" width="24.5" height="40.3333" stroke="#DB2E27" stroke-width="4"/>
+            <rect x="109.75" y="117.667" width="24.5" height="40.3333" stroke="#D8D9DA" stroke-width="4"/>
+            </svg>`,
+            descr: "Предлагаем полный спектр услуг в сфере горной промышленности. Всегда ищем новые решения и накапливаем опыт."
+        }
+      ]
+
+    -
+      var companyData = [
+        {
+          material: "Cu, Zn",
+          location: "Россия, Башкортостан",
+          year: "2000-2015",
+          title: "УЧАЛИНСКИЙ ГОК",
+          img: "../images/gok.png"
+        },
+        {
+          material: "Cu, Zn",
+          location: "Россия",
+          year: "2014-2016",
+          title: "АЛЕКСАНДРИНСКАЯ ГОРНО-РУДНАЯ КОМПАНИЯ",
+          img: "../images/rmk.png"
+        },
+        {
+          material: "Фосфатное",
+          location: "Россия",
+          year: "2002-2016",
+          title: "АО «АПАТИТ»",
+          img: "../images/rmk.png"
+        },
+        {
+          material: "Cu, Zn",
+          location: "Казахстан",
+          year: "2013, 2018-2019",
+          title: "АКТЮБИНСКАЯ МЕДНАЯ КОМПАНИЯ",
+          img: "../images/gok.png"
+        },
+        {
+          material: "Cu, Zn",
+          location: "Монголия",
+          year: "2006-2013",
+          title: "КОО ПРЕДРИЯТИЕ ЭРДЭНЭТ",
+          img: "../images/gok.png"
+        },
+        {
+          material: "Cu, Zn",
+          location: "Россия, Башкортостан",
+          year: "2000-2015",
+          title: "ГАЙСКИЙ ГОК",
+          img: "../images/rmk.png"
+        },
+        {
+          material: "Cu, Zn",
+          location: "Россия, Башкортостан",
+          year: "2000-2015",
+          title: "ГМК КАЗАХАЛТЫН",
+          img: "../images/rmk.png"
+        },
+        {
+          material: "Cu, Zn",
+          location: "Россия, Башкортостан",
+          year: "2000-2015",
+          title: "НАВОИЙСКИЙ ГМК, ГМЗ-3",
+          img: "../images/gok.png"
+        },
+        {
+          material: "Cu, Zn",
+          location: "Россия, Башкортостан",
+          year: "2000-2015",
+          title: "НАВОИЙСКИЙ ГМК, ГМЗ-4",
+          img: "../images/gok.png"
+        },
+        {
+          material: "Cu, Zn",
+          location: "Украина",
+          year: "2003, 2008, 2013",
+          title: "ОАО «ИНГУЛЕЦКИЙ ГОК»",
+          img: "../images/rmk.png"
+        }
+      ]
+
+    .ticket-wrapper
+      each item in cardsData
+        .ticket
+          .ticket__screen
+            .ticket__top
+              h3.ticket__title!= item.title
+              p.ticket__mob-descr= item.descr
+            .ticket__block 
+              .ticket__num= item.num
+              .ticket__img!= item.img
+          .ticket__descr
+            p= item.descr
+
+    .company-wrapper
+      each item in companyData
+        .company
+          img.company__img(src=item.img, alt="")
+          .company__inner
+            .company__grid
+              .company__col 
+                .company__subtitle Металлы
+                .company__descr
+                  =item.material
+              .company__col 
+                .company__subtitle Локация
+                .company__descr
+                  =item.location
+              .company__col 
+                .company__subtitle Год
+                .company__descr
+                  =item.year
+            .company__wrapper
+              h3.company__title 
+                =item.title
