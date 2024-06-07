@@ -1,0 +1,87 @@
+extends ../../layout/layout
+
+block variables
+  -
+    const pageName = 'screen'
+    const pageTitle = 'screen'
+
+block content
+  main
+    .screen-wrapper
+      aside.sticky
+        .sticky__content 
+          h3.sticky__title 
+            |АО «НПО «РИВС»
+          p.sticky__descr
+            |Российская производственно-инжиниринговая компания, разрабатывающая комплексные решения для обогатительных и металлургических предприятий с достижением гарантированных технологических показателей. 
+          a.btn(href="#")
+            .btn__text
+              |О компании
+            .btn__arrow
+              svg(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none")
+                path(d="M3.67187 12.9999L3.67187 10.9999L16.5002 10.9999L13.2577 7.75736L14.6719 6.34315L20.3287 12L14.6719 17.6569L13.2577 16.2426L16.5004 12.9999L3.67187 12.9999Z" fill="white")
+        img.sticky__img(src="../../images/planet.webp" alt="")
+      .screen
+        .screen__upblock 
+          h3.screen__uptitle 
+            |АО «НПО «РИВС»
+          p.screen__updescr
+            |Российская производственно-инжиниринговая компания, разрабатывающая комплексные решения для обогатительных и металлургических предприятий с достижением гарантированных технологических показателей. 
+        h2.screen__title
+          |развиваем российские решения 
+          span.screen__title.screen__title_grey
+            |по переработке минерального
+        .screen__subtitle
+          h2.screen__title.screen__title_grey
+            |сырья
+          .screen__year
+            |[ 
+            span.screen__year.screen__year_red 
+              |с 1991 года
+            | ]
+        .screen__up-wrapper
+          .screen__col
+            .screen__num
+              |20+
+            .sticky__title
+              |Стран
+              br
+              |на карте
+              br
+              |проектов
+          .screen__hide-img 
+            +picture('planet.webp', 'planet-mob.webp')
+            //- img(src="../../images/planet.webp" alt="")
+        .screen__block
+          .screen-card
+            .screen-card__title 
+              |национальный проект «производительность
+              br 
+              |труда»
+            .screen-card__img.h-112
+              +picture('national.webp', 'national-mob.webp')
+            //- img(src="../../images/national.webp" alt="")
+            .screen-card__descr
+              |Являемся участником Национального проекта «Производительность труда».
+          .screen-card.screen-card_grey
+            .screen-card__title
+              |гисп
+            img.screen-card__img.h-116(src="../../images/gisp.webp" alt="")
+            .screen-card__descr
+              |Наше оборудование внесено в реестр государственной информационной системы промышленности ГИСП.
+          .screen-card.screen-card_light-grey
+            .screen-card__title 
+              |минпромторг россии
+            img.screen-card__img.h-96(src="../../images/minpromtorg.webp" alt="")
+            .screen-card__block
+              .screen-card__descr
+                |Мы находимся в реестре системообразующих организаций Минпромторга России в категории «Тяжёлое машиностроение».
+              .screen-card__descr
+                |Нам присвоен статус «Российский производитель», подтверждающий российское происхождение всей линейки обогатительного оборудования.
+        .screen__down-btn
+          a.btn(href="#")
+            .btn__text
+              |О компании
+            .btn__arrow
+              svg(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none")
+                path(d="M3.67187 12.9999L3.67187 10.9999L16.5002 10.9999L13.2577 7.75736L14.6719 6.34315L20.3287 12L14.6719 17.6569L13.2577 16.2426L16.5004 12.9999L3.67187 12.9999Z" fill="white")
